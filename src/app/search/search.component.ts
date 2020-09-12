@@ -31,24 +31,6 @@ export class SearchComponent implements OnInit {
           this.products = data;
         }
       });
-      // this.products = [{
-      //   id: '2305',
-      //   brand: 'adda',
-      //   description: 'oftetv sxgwl',
-      //   image: 'www.lider.cl/catalogo/images/tvIcon.svg',
-      //   price: '775684',
-      //   priceDis: 387842,
-      //   isPalindromo: true
-      // },
-      // {
-      //   id: '2305',
-      //   brand: 'adda',
-      //   description: 'oftetv sxgwl',
-      //   image: 'www.lider.cl/catalogo/images/tvIcon.svg',
-      //   price: '775684',
-      //   priceDis: 387842,
-      //   isPalindromo: true
-      // }];
     }
   }
 

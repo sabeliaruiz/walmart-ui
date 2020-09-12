@@ -58,12 +58,12 @@
         <div class="list-products">
           <section class="product-card" *ngFor="let product of products">
             <div class="card-header">
-              <img  src="http://{{product.image}}" height="200px" width="300px"/>
+              <img  src="http://{{product.image}}" height="50px" width="100px"/>
             </div>
             <div class="description-pricing">
               <label class="title"><strong>{{product.brand}}</strong> {{product.description}}</label>
-              <label class="pricing"><strong>${{product.priceDis}}</strong></label>
-              <label class="old-pricing">${{product.price}}</label>
+              <label class="pricing"><strong>${{product.priceDis}}  </strong><img src="assets/descuento.JPG" height="25px" width="30px"  [hidden]=!product.isPalindromo/></label>
+              <label class="old-pricing" [hidden]=!product.isPalindromo>${{product.price}}</label>
             </div>
             <div class="add-container">
               <div style="width: 95%;">
