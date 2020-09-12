@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0./css/font-awesome.min.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+  <title>Lider.cl</title>
+</head>
+<body>
+    <div class="header-info">
+      <label>Servicio al cliente de Lider.cl: Whatsapp 
+        <em>+56957211492</em>
+        | Horario: de lunes a viernes de 8:00 a 22:00 y sábado, domingo y festivos de 9:00 a 22:00
+      </label>
+    </div>
+
+    <div class="header-cont">
+      <div class="logo">
+        <img src="assets/lider-logo.svg" />
+      </div>
+      <div class="categories">
+        <button>
+          <img src="assets/menu.png" />
+          Categorías
+        </button>
+      </div>
+      
+        <div class="search">
+          <img src="assets/search-icon.png" />
+          <form [formGroup]="walmartForm" #formDir="ngForm" id="walmartForm" novalidate>
+            <input type="text" id="productName"(change)="selectProduct()" [(ngModel)]="productName" formControlName="productName" placeholder="¿Qué estás buscando?" />
+          </form>
+        </div>
+      <div class="buy-car">
+        <button>
+          <img src="assets/buy-car.png" />
+          <h4>0</h4>
+        </button>
+      </div>
+        <button class="market-button">
+          <img src="assets/harina.png" />
+          Supermercado
+        </button>
+    </div>
+
+    <div class="result-category">
+      <label>Resultados para <strong>181</strong>:</label>
+      <button>
+        <strong>ordenar por: destacados</strong>
+        <img src="assets/arrow-right.png" />
+      </button>
+    </div>
+
+    <div class="body-content">
+      <div style="display: flex;flex:1"></div>
+      <div class="product-result">
+        <div class="list-products">
+          <section class="product-card" *ngFor="let product of products">
+            <div class="card-header">
+              <img  src="http://{{product.image}}" height="200px" width="300px"/>
+            </div>
+            <div class="description-pricing">
+              <label class="title"><strong>{{product.brand}}</strong> {{product.description}}</label>
+              <label class="pricing"><strong>${{product.priceDis}}</strong></label>
+              <label class="old-pricing">${{product.price}}</label>
+            </div>
+            <div class="add-container">
+              <div style="width: 95%;">
+                <button class="tag-button" style="border-color: #035891;color: #035891;">despacho</button>
+                <button class="tag-button" style="border-color: #dda704;color: #dda704;">retiro</button>
+              </div>
+              <button class="add-button">
+                <strong>Agregar</strong>
+              </button>
+            </div>
+          </section>
+        </div>
+        <div class="pagination-bar">
+          <button>
+            <img src="assets/arrow-left.png" />
+          </button>
+          <h4>1</h4>
+          <button>
+            <img src="assets/arrow-right.png" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="legal-info">
+      <strong>Ver información Legal</strong>
+      <img src="assets/arrow-right-blue.png" />
+    </div>
+  
+</body>
+</html>
+
